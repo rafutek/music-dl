@@ -20,6 +20,7 @@ public:
     Tagger(Variables *vars);
     ~Tagger();
     void tag(const path &filepath);
+    void setCoverTag(const path &filepath);
     TagLib::FileRef getTaggedFile();
 };
 

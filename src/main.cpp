@@ -9,7 +9,6 @@ int main(int argc, const char *argv[])
 {
     ArgParser argparser(argc, argv);
     Variables *vars = argparser.getVariables();
-    vars->printAll();
     if (!vars->areCompatible())
     {
         cerr << "some variables are not compatible\n";

@@ -33,7 +33,6 @@ void Downloader::download()
     fs::create_directory(dl_dir_name);
 
     string command = this->getDownloadCommand();
-    cout << command << "\n";
     int error_code;
     try
     {
@@ -46,7 +45,7 @@ void Downloader::download()
 
     if (error_code != 0)
     {
-        cerr << "error when downloading music\n";
+        cerr << "error downloading music\n";
         exit(1);
     }
 }
