@@ -39,5 +39,5 @@ Options:
 
 - Create a test directory with `mkdir test_dir`.
 - After `cd test_dir`, execute `music-dl https://www.youtube.com/watch?v=FSRipXBJqcc`.
-- Finally, check thre result with `tree`. You can also open the downloaded file with your music player to see the tags.
-- You can redo these steps adding options to the command.
+- Finally, check thre result with `tree`, and open the downloaded file with your music player to see its tags.
+- You may want to redo these steps adding options to the command.
