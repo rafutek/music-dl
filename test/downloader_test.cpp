@@ -20,7 +20,7 @@ BOOST_AUTO_TEST_CASE(dl_dir)
     Downloader downloader(argparser.getVariables());
 
     // Then download dir must be this one
-    BOOST_TEST(downloader.getDownloadDir() == ".music_dl");
+    BOOST_TEST(downloader.getDownloadDir() == ".music_dl"); 
 }
 
 BOOST_AUTO_TEST_CASE(basic_dl_command)
@@ -54,7 +54,7 @@ BOOST_AUTO_TEST_CASE(command_mp3_format)
     string out = downloader.getDownloadDir() + "/%(playlist_index)s_%(title)s.%(ext)s ";
     string format = "--audio-format mp3 ";
     string mp3_command = executable + " -x -o " + out + format + url;
-    // BOOST_TEST(downloader.getDownloadCommand() == mp3_command);
+    BOOST_TEST(downloader.getDownloadCommand() == mp3_command);
 }
 
 BOOST_AUTO_TEST_CASE(command_flac_format)
@@ -69,7 +69,7 @@ BOOST_AUTO_TEST_CASE(command_flac_format)
     string out = downloader.getDownloadDir() + "/%(playlist_index)s_%(title)s.%(ext)s ";
     string format = "--audio-format flac ";
     string flac_command = executable + " -x -o " + out + format + url;
-    // BOOST_TEST(downloader.getDownloadCommand() == flac_command);
+    BOOST_TEST(downloader.getDownloadCommand() == flac_command);
 }
 
 ////////////////////////////////////////////////////////
@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_CASE(command_extract_cover)
     string format = "--audio-format mp3 ";
     string extract_cover = "--embed-thumbnail";
     string cover_command = executable + " -x " + extract_cover + " -o " + out + format + url;
-    // BOOST_TEST(downloader.getDownloadCommand() == cover_command);
+    BOOST_TEST(downloader.getDownloadCommand() == cover_command);
 }
 
 BOOST_AUTO_TEST_CASE(command_cover_path)
@@ -105,7 +105,7 @@ BOOST_AUTO_TEST_CASE(command_cover_path)
     string out = downloader.getDownloadDir() + "/%(playlist_index)s_%(title)s.%(ext)s ";
     string format = "--audio-format mp3 ";
     string basic_command = executable + " -x -o " + out + format + url;
-    // BOOST_TEST(downloader.getDownloadCommand() == basic_command);
+    BOOST_TEST(downloader.getDownloadCommand() == basic_command);
 }
 
 BOOST_AUTO_TEST_SUITE_END()
