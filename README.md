@@ -1,6 +1,8 @@
 ## About
 
-This C++ program is a youtube-dl wrapper to make downloading music easier. In addition of youtube-dl options, the files are tagged and moved into the artist/album folders.
+This C++ program is a [youtube-dl](https://github.com/ytdl-org/youtube-dl) wrapper to make downloading music easier from YouTube, SoundCloud and [other websites](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md).
+
+In addition of youtube-dl options, the files are tagged and moved into the artist/album folders.
 
 ``` txt
 music-dl is a program for GNU/Linux users to download and tag music.
@@ -28,21 +30,15 @@ Options:
 ## Install
 
 - Clone or dowload this repository.
-
-- Make sure [Boost](https://www.boost.org/) and [TagLib](https://taglib.org/) libraries are installed on your system.
-
-On Debian, install them with `sudo apt-get install libboost-all-dev libtag1-dev`.
-
+- Make sure [Boost](https://www.boost.org/) and [TagLib](https://taglib.org/) libraries are installed on your system. On Debian, install them with `sudo apt-get install libboost-all-dev libtag1-dev`.
 - Compile and run the tests (optional)
-
-- Install the program with `make install`.
-
-It will store it in your ~/.local/bin directory.
-
+- Install the program with `make install`. It will store it in your ~/.local/bin directory.
 - Open a new terminal and check with `music-dl -h`
 
 
 ## First steps
 
-- Create a test directory and go into
-- Choose a playlist or
+- Create a test directory with `mkdir test_dir`.
+- After `cd test_dir`, execute `music-dl https://www.youtube.com/watch?v=FSRipXBJqcc`.
+- Finally, check thre result with `tree`. You can also open the downloaded file with your music player to see the tags.
+- You can redo these steps adding options to the command.
