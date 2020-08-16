@@ -29,7 +29,7 @@ Options:
 ## Install
 
 - Clone or dowload this repository.
-- Make sure [Boost](https://www.boost.org/) and [TagLib](https://taglib.org/) libraries are installed on your system. On Debian, install them with `sudo apt-get install libboost-all-dev libtag1-dev`.
+- Make sure [Boost](https://www.boost.org/) and [TagLib](https://taglib.org/) libraries are installed on your system. Check your distribution's Dockerfile in **test/** if necessary.
 - Compile and run the tests (optional).
 - Install music-dl executing `make install` from **src/** folder. It will copy the executable in your **~/.local/bin** directory.
 - Open a new terminal and check with `music-dl -h`. If the help message is not displayed, you must add **~/.local/bin** to your PATH variable.
