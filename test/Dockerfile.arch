@@ -1,0 +1,10 @@
+FROM archlinux
+
+RUN pacman -Syu --noconfirm
+RUN pacman -S --noconfirm git
+RUN git clone https://github.com/rafutek/music-dl.git
+
+RUN pacman -S --noconfirm make gcc
+RUN pacman -S --noconfirm boost taglib
+
+RUN cd music-dl/src/ && make && ./music-dl -h

@@ -23,3 +23,5 @@ clean:
 
 purge: clean
 	$(RM) $(PROG_NAME)
+
+remake: purge all
