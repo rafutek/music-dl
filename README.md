@@ -1,6 +1,6 @@
 ## About
 
-This C++ program is a [youtube-dl](https://github.com/ytdl-org/youtube-dl) wrapper to make downloading music from YouTube, SoundCloud and [other websites](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md) easier. The downloaded music is automatically tagged and moved to **./artist/album/** folder.
+This C++ program is a [youtube-dl](https://github.com/ytdl-org/youtube-dl) wrapper to make downloading music from YouTube, SoundCloud and [other websites](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md) easier. The downloaded music is automatically tagged and moved to **./artist/album/**.
 Check the options below for more details.
 
 ``` txt
