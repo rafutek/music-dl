@@ -46,6 +46,7 @@ void Downloader::download()
     if (error_code != 0)
     {
         cerr << "error downloading music\n";
+        fs::remove_all(dl_dir_name);
         exit(1);
     }
 }

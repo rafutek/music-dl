@@ -5,7 +5,6 @@ using namespace std;
 
 enum Format {
     MP3,
-    FLAC
 };
 
 string formatToString(const Format &format);

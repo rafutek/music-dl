@@ -44,7 +44,7 @@ BOOST_AUTO_TEST_CASE(basic_dl_command)
 
 BOOST_AUTO_TEST_CASE(command_mp3_format)
 {
-    // Given a command with flac format option
+    // Given a command with mp3 format option
     const char *argv[] = {progname, "-f", "mp3", url};
     const unsigned int argc = sizeof(argv) / sizeof(*argv);
     ArgParser argparser(argc, argv);
@@ -55,21 +55,6 @@ BOOST_AUTO_TEST_CASE(command_mp3_format)
     string format = "--audio-format mp3 ";
     string mp3_command = executable + " -x -o " + out + format + url;
     BOOST_TEST(downloader.getDownloadCommand() == mp3_command);
-}
-
-BOOST_AUTO_TEST_CASE(command_flac_format)
-{
-    // Given a command with flac format option
-    const char *argv[] = {progname, "-f", "flac", url};
-    const unsigned int argc = sizeof(argv) / sizeof(*argv);
-    ArgParser argparser(argc, argv);
-    Downloader downloader(argparser.getVariables());
-
-    // Then the command must have flac format option
-    string out = downloader.getDownloadDir() + "/%(playlist_index)s_%(title)s.%(ext)s ";
-    string format = "--audio-format flac ";
-    string flac_command = executable + " -x -o " + out + format + url;
-    BOOST_TEST(downloader.getDownloadCommand() == flac_command);
 }
 
 ////////////////////////////////////////////////////////

@@ -23,7 +23,7 @@ Options:
   -r [ --remove-ex ] arg  Remove expression from titles
                           (option can be used multiple times)
   -f [ --format ] arg     Set audio format
-                          choices: ['mp3', 'flac'] ('mp3' by default)
+                          choices: ['mp3'] ('mp3' by default)
 ```
 
 ## Install

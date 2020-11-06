@@ -68,7 +68,7 @@ ArgParser::ArgParser(int argc, const char *argv[])
                        "(option can be used multiple times)");
         opt_desc_adder(full_opt_format.c_str(), po::value<string>(),
                        "Set audio format\n"
-                       "choices: ['mp3', 'flac'] ('mp3' by default)");
+                       "choices: ['mp3'] ('mp3' by default)");
 
         all_desc.add(opt_desc).add(required_desc);
 

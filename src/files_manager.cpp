@@ -52,7 +52,7 @@ void FilesManager::moveFile(const path &filepath)
                           vars->getAlbum() + "/";
         fs::create_directories(new_path);
         string new_filepath = new_path + new_stem + ext;
-        fs::rename(filepath, new_filepath); // move renamed file its directory
+        fs::rename(filepath, new_filepath); // move renamed file in its music directory
     }
     else
     {

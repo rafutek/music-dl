@@ -287,19 +287,4 @@ BOOST_AUTO_TEST_CASE(format_mp3_opt)
     BOOST_TEST(vars->getFormat() == Format::MP3);
 }
 
-BOOST_AUTO_TEST_CASE(format_flac_opt)
-{
-    // Given a command with flac format option
-    const char *argv[] = {progname, "-f", "flac", url};
-    const unsigned int argc = sizeof(argv) / sizeof(*argv);
-
-    // When parsing the command
-    ArgParser argparser(argc, argv);
-
-    // Then the format variable must be FLAC
-    Variables *vars = argparser.getVariables();
-    BOOST_TEST(vars->getFormat() == Format::FLAC);
-}
-
-
 BOOST_AUTO_TEST_SUITE_END()
